@@ -53,6 +53,12 @@ sudo su - postgres -c "createuser -s odoo"
 sudo su - postgres -c "createdb odoo"
 ```
 
+```
+#cria uma senha para o usuário
+sudo su - postgres psql
+psql=# alter user odoo with encrypted password 'odoo';
+```
+
 Por fim, conceda todos os privilégios ao usuário **odoo** no banco de dados *odoo*
 
 ```
