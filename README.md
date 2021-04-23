@@ -27,7 +27,7 @@ Execute o script de instalação dos pacotes e dependencias
 
 <h3>Criação do usuário Odoo</h3>
 
-Com todos os pacotes e dependencias instaladas do `run_pack.sh` vamos criar uma conta de usuário bOdoo. Para que isso ocorra executaremos o comando abaixo:
+Com todos os pacotes e dependencias instaladas do `run_pack.sh` vamos criar uma conta de usuário Odoo. Para que isso ocorra executaremos o comando abaixo:
 
 `sudo useradd -m -d /opt/odoo -U -r -s /bin/bash odoo`
 
@@ -55,8 +55,22 @@ sudo su - postgres -c "createdb odoo"
 
 Por fim, conceda todos os privilégios ao usuário **odoo** no banco de dados *odoo*
 
+```
+sudo -u postgres psql
+grant all privileges on database odoo to odoo;
+
+\q
+```
+
 <h3>Instalação e configuração do Odoo</h3>
 
+Com o ambiente preparado para receber o Odoo iremos realizar a instalação e configuração dele. Para isso vamos mudar para a conta de usuário odoo que criamos lá no inicio:
+
+`sudo su - odoo`
+
+Em seguida, clonar o pacote Odoo, utilizamos a versão 12 neste projeto.
+
+`sudo git clone https://www.github.com/odoo/odoo --depth 1 --branch 12.0 --single-branch /opt/odoo/odoo12`
 
 
 
