@@ -22,6 +22,7 @@ echo 'Instalando git'
 sudo apt-get install git-all -y &&
 
 #Configurando usuario do GIT
+clear
 echo "Informe o seu nome git:"
 read git_config_user_name
 git config --global user.name "$git_config_user_name"
@@ -66,6 +67,18 @@ sudo apt-get install -y python3-pip -y &&
 
 sudo apt-get install python-dev python3-dev build-essential libjpeg-dev libpq-dev libjpeg8-dev libxml2-dev libssl-dev libffi-dev libmysqlclient-dev libxslt1-dev zlib1g-dev libsasl2-dev libldap2-dev  liblcms2-dev -y &&
 
+# Install pycharm
+echo 'Instalando PyCharm'
+sudo snap install pycharm-community --classic &&
 
-
-
+echo "Instalação bem sucedida!"
+echo  .##.....##.#########.##.##.....##.#########..
+echo  .##...##...##........##.##...##...##.....##.. 
+echo  .##.##.....##........##.##.##.....##.....##..
+echo  .###.......#######...##.###.......##.....##..
+echo  .##.##.....##........##.##.##.....##.....##..
+echo  .##...##...##........##.##...##...##.....##..
+echo  .##.....##.#########.##.##.....##.#########..
+echo "Pressione Enter para prosseguir"
+read #pausa
+exit
