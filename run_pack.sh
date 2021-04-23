@@ -62,11 +62,15 @@ sudo apt-get install postgresql-10 -y &&
 echo 'postgresql instalado!'
 
 # Instalação do Python e suas dependencias
-echo 'Instalando dependencias do Python'
-sudo apt-get install -y python3-pip -y &&
-
-sudo apt-get install python-dev python3-dev build-essential libjpeg-dev libpq-dev libjpeg8-dev libxml2-dev libssl-dev libffi-dev libmysqlclient-dev libxslt1-dev zlib1g-dev libsasl2-dev libldap2-dev  liblcms2-dev -y &&
-
+echo 'Instalando dependencias'
+sudo apt-get install python3-pip -y &&
+sudo apt install wget -y && 
+sudo apt-get install python-dev python3-dev python3-venv python3-wheel build-essential python3-setuptools -y &&
+sudo apt-get install libjpeg-dev libpq-dev libjpeg8-dev libxml2-dev libssl-dev libffi-dev libmysqlclient-dev \
+                     libxslt1-dev zlib1g-dev libsasl2-dev libldap2-dev  liblcms2-dev libtiff5-dev  libopenjp2-7-dev \
+                     libwebp-dev libharfbuzz-dev libfribidi-dev libxcb1-dev libfreetype6-dev libzip-dev -y &&
+sudo apt install wget node-less -y &&
+ 
 # Install pycharm
 echo 'Instalando PyCharm'
 sudo snap install pycharm-community --classic &&
