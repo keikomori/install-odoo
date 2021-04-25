@@ -76,7 +76,7 @@ Com o ambiente preparado para receber o Odoo iremos realizar a instalação e co
 
 Em seguida, clonar o pacote Odoo, utilizamos a versão 12 neste projeto.
 
-`sudo git clone https://www.github.com/odoo/odoo --depth 1 --branch 12.0 --single-branch /opt/odoo/odoo12`
+`git clone https://www.github.com/odoo/odoo --depth 1 --branch 12.0 --single-branch /opt/odoo/odoo12`
 
 
 
