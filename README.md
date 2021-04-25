@@ -62,7 +62,8 @@ Por fim, conceda todos os privilégios ao usuário **odoo** no banco de dados *o
 
 > ainda dentro do `#psql`
 
-```grant all privileges on database odoo to odoo;
+```
+grant all privileges on database odoo to odoo;
 
 \q
 ```
