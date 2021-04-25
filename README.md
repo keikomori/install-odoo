@@ -23,7 +23,7 @@ Esse é um script de execução bem simples para facilitar a instalação do Odo
  
 Execute o script de instalação dos pacotes e dependencias
 
-`/run_pack.sh`
+`./run_pack.sh`
 
 <h3>Criação do usuário Odoo</h3>
 
