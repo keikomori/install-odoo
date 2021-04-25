@@ -13,18 +13,18 @@ then
     echo 'Não foi possível atualizar os repositórios. Verifique seu arquivo /etc/apt/sources.list'
     exit 1
 fi
-acho ' '
+echo ' '
 echo 'Atualização realizada com sucesso!'
 
-acho ' '
+echo ' '
 echo 'Pressione Enter para prosseguir'
 read #pausa
 
-acho ' '
+echo ' '
 echo '--- Instalando pacotes/dependencias para executar Odoo ---'
 
 # Instalação do Git
-acho ' '
+echo ' '
 echo 'Instalando git'
 sudo apt-get install git-all -y &&
 
@@ -41,22 +41,22 @@ read git_config_user_email
 git config --global user.email $git_config_user_email
 clear
 
-acho ' '
+echo ' '
 echo 'Git instalado!' 
 
 # Instalação do conversor HTML para PDF
-acho ' '
+echo ' '
 echo 'Instalando conversor HTML para PDF'
 wget https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.5/wkhtmltox_0.12.5-1.bionic_amd64.deb &&
 
 sudo apt install ./wkhtmltox_0.12.5-1.bionic_amd64.deb -y &&
 
-acho ' '
+echo ' '
 echo 'WKHTMLTOX instalado!'
 
 
 # instalando postgresql
-acho ' '
+echo ' '
 echo 'Instalando Postgresql'
 # Create the file repository configuration:
 sudo sh -c 'echo "deb [arch=amd64] http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list' &&
@@ -74,7 +74,7 @@ echo 'Postgresql instalado!'
 
 
 # Instalação do Python e suas dependencias
-acho ' '
+echo ' '
 echo 'Instalando dependencias'
 sudo apt-get install python3-pip -y &&
 sudo apt install wget -y && 
@@ -83,18 +83,18 @@ sudo apt-get install libjpeg-dev libpq-dev libjpeg8-dev libxml2-dev libssl-dev l
                      libxslt1-dev zlib1g-dev libsasl2-dev libldap2-dev  liblcms2-dev libtiff5-dev  libopenjp2-7-dev \
                      libwebp-dev libharfbuzz-dev libfribidi-dev libxcb1-dev libfreetype6-dev libzip-dev -y &&
 
-acho ' '
+echo ' '
 echo 'Instalando nodeJS NPM'
 sudo apt-get install nodejs npm -y &&
 sudo npm install -g rtlcss &&
 sudo apt install wget node-less -y &&
  
 # Install pycharm
-acho ' '
+echo ' '
 echo 'Instalando PyCharm'
 sudo snap install pycharm-community --classic &&
 
-acho ' '
+echo ' '
 echo 'Instalação bem sucedida!'
 echo  .##.....##.#########.##.##.....##.#########..
 echo  .##...##...##........##.##...##...##.....##.. 
