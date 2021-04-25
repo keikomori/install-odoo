@@ -43,27 +43,26 @@ Iniciamos habilitando e iniciando o servidor de banco de dados:
 
 Em seguida, crie um usuário do banco de dados `postgresql` para **Odoo** e uma nova conta de usuário chamada **Odoo**
 
-```
-# esse comando faz o login e cria um usuário de banco de dados
-sudo su - postgres -c "createuser -s odoo"
-```
+`sudo su - postgres -c "createuser -s odoo"`
 
-```
-#cria uma nova conta de usuário de banco de dados chamado odoo
-sudo su - postgres -c "createdb odoo"
-```
+> esse comando acima faz o login e cria um usuário de banco de dados
 
-```
-#cria uma senha para o usuário
-sudo su - postgres psql
-psql=# alter user odoo with encrypted password 'odoo';
-```
+`sudo su - postgres -c "createdb odoo"`
+
+> cria uma nova conta de usuário de banco de dados chamado odoo
+
+Para criar uma senha para o usuário
+`sudo su - postgres`
+
+`psql`
+
+`alter user odoo with encrypted password 'odoo';`
 
 Por fim, conceda todos os privilégios ao usuário **odoo** no banco de dados *odoo*
 
-```
-sudo -u postgres psql
-grant all privileges on database odoo to odoo;
+> ainda dentro do `#psql`
+
+```grant all privileges on database odoo to odoo;
 
 \q
 ```
@@ -105,7 +104,6 @@ Para criar um novo diretório para os addons personalizados:
 E, finalmente, voltar para o usuário `sudo`:
 
 `exit`
-
 
 
 
