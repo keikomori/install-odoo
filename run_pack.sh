@@ -13,15 +13,19 @@ then
     echo 'Não foi possível atualizar os repositórios. Verifique seu arquivo /etc/apt/sources.list'
     exit 1
 fi
-echo '\nAtualização realizada com sucesso!'
+acho ' '
+echo 'Atualização realizada com sucesso!'
 
-echo '\nPressione Enter para prosseguir'
+acho ' '
+echo 'Pressione Enter para prosseguir'
 read #pausa
 
-echo '\n --- Instalando pacotes/dependencias para executar Odoo ---'
+acho ' '
+echo '--- Instalando pacotes/dependencias para executar Odoo ---'
 
 # Instalação do Git
-echo '\nInstalando git'
+acho ' '
+echo 'Instalando git'
 sudo apt-get install git-all -y &&
 
 #Configurando usuario do GIT
@@ -37,19 +41,23 @@ read git_config_user_email
 git config --global user.email $git_config_user_email
 clear
 
-echo '\nGit instalado!' 
+acho ' '
+echo 'Git instalado!' 
 
 # Instalação do conversor HTML para PDF
-echo '\nInstalando conversor HTML para PDF'
+acho ' '
+echo 'Instalando conversor HTML para PDF'
 wget https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.5/wkhtmltox_0.12.5-1.bionic_amd64.deb &&
 
 sudo apt install ./wkhtmltox_0.12.5-1.bionic_amd64.deb -y &&
 
-echo '\nWKHTMLTOX instalado!'
+acho ' '
+echo 'WKHTMLTOX instalado!'
 
 
 # instalando postgresql
-echo '\nInstalando Postgresql'
+acho ' '
+echo 'Instalando Postgresql'
 # Create the file repository configuration:
 sudo sh -c 'echo "deb [arch=amd64] http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list' &&
 
@@ -62,11 +70,12 @@ sudo apt-get update &&
 # Install the latest version of PostgreSQL.
 # If you want a specific version, use 'postgresql-12' or similar instead of 'postgresql':
 sudo apt-get install postgresql-10 -y &&
-echo '\nPostgresql instalado!'
+echo 'Postgresql instalado!'
 
 
 # Instalação do Python e suas dependencias
-echo '\nInstalando dependencias'
+acho ' '
+echo 'Instalando dependencias'
 sudo apt-get install python3-pip -y &&
 sudo apt install wget -y && 
 sudo apt-get install python-dev python3-dev python3-venv python3-wheel build-essential python3-setuptools -y &&
@@ -74,16 +83,19 @@ sudo apt-get install libjpeg-dev libpq-dev libjpeg8-dev libxml2-dev libssl-dev l
                      libxslt1-dev zlib1g-dev libsasl2-dev libldap2-dev  liblcms2-dev libtiff5-dev  libopenjp2-7-dev \
                      libwebp-dev libharfbuzz-dev libfribidi-dev libxcb1-dev libfreetype6-dev libzip-dev -y &&
 
-echo '\nInstalando nodeJS NPM'
+acho ' '
+echo 'Instalando nodeJS NPM'
 sudo apt-get install nodejs npm -y &&
 sudo npm install -g rtlcss &&
 sudo apt install wget node-less -y &&
  
 # Install pycharm
-echo '\nInstalando PyCharm'
+acho ' '
+echo 'Instalando PyCharm'
 sudo snap install pycharm-community --classic &&
 
-echo '\n\nInstalação bem sucedida!'
+acho ' '
+echo 'Instalação bem sucedida!'
 echo  .##.....##.#########.##.##.....##.#########..
 echo  .##...##...##........##.##...##...##.....##.. 
 echo  .##.##.....##........##.##.##.....##.....##..
