@@ -78,8 +78,33 @@ Em seguida, clonar o pacote Odoo, utilizamos a versão 12 neste projeto.
 
 `git clone https://www.github.com/odoo/odoo --depth 1 --branch 12.0 --single-branch /opt/odoo/odoo12`
 
+Com a programa fonte do odoo clonado, criamos um ambiente virtual do Odoo no Python
 
+`cd /opt/odoo/odoo12`
 
+`python3 -m venv odoo-venv`
+
+Ativamos o ambiente:
+
+`source odoo-venv/bin/activate`
+
+E instalamos todos os módulos do Python com o pip3:
+
+`pip3 install wheel`
+
+`pip3 install -r requirements.txt`
+
+Desativamos o ambiente virtual com o comando:
+
+`deactivate`
+
+Para criar um novo diretório para os addons personalizados:
+
+`mkdir /opt/odoo/odoo12/odoo-custom-addons`
+
+E, finalmente, voltar para o usuário `sudo`:
+
+`exit`
 
 
 
