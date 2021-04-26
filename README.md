@@ -78,7 +78,7 @@ Em seguida, clonar o pacote Odoo, utilizamos a versão 12 neste projeto.
 
 `git clone https://www.github.com/odoo/odoo --depth 1 --branch 12.0 --single-branch /opt/odoo/odoo12`
 
-Com a programa fonte do odoo clonado, criamos um ambiente virtual do Odoo no Python
+<!--Com a programa fonte do odoo clonado, criamos um ambiente virtual do Odoo no Python
 
 `cd /opt/odoo/odoo12`
 
@@ -104,6 +104,4 @@ Para criar um novo diretório para os addons personalizados:
 
 E, finalmente, voltar para o usuário `sudo`:
 
-`exit`
-
-
+`exit`-->
