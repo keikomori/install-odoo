@@ -25,83 +25,22 @@ Execute o script de instalação dos pacotes e dependencias
 
 `./run_pack.sh`
 
-<h3>Criação do usuário Odoo</h3>
-
-Com todos os pacotes e dependencias instaladas do `run_pack.sh` vamos criar uma conta de usuário Odoo. Para que isso ocorra executaremos o comando abaixo:
-
-`sudo useradd -m -d /opt/odoo -U -r -s /bin/bash odoo`
-
-> O diretório doméstico do usuário será `opr/odoo/`
-
 <h3>Criação do banco de dados</h3>
-
-Quando executamos `run_pack.sh` foi realizada também a instalação do `postgresql`. Neste passo iremos realizar a configuração.
 
 Iniciamos habilitando e iniciando o servidor de banco de dados:
 
 `sudo systemctl enable --now postgresql.service`
 
-Em seguida, crie um usuário do banco de dados `postgresql` para **Odoo** e uma nova conta de usuário chamada **Odoo**
-
-`sudo su - postgres -c "createuser -s odoo"`
-
-> esse comando acima faz o login e cria um usuário de banco de dados
+Criamos um banco de dados
 
 `sudo su - postgres -c "createdb odoo"`
 
-> cria uma nova conta de usuário de banco de dados chamado odoo
-
-Para criar uma senha para o usuário
-`sudo su - postgres`
-
-`psql`
-
-`alter user odoo with encrypted password 'odoo';`
-
-Por fim, conceda todos os privilégios ao usuário **odoo** no banco de dados *odoo*
-
-> ainda dentro do `#psql`
-
-```
-grant all privileges on database odoo to odoo;
-
-\q
-```
-
 <h3>Instalação e configuração do Odoo</h3>
-
-Com o ambiente preparado para receber o Odoo iremos realizar a instalação e configuração dele. Para isso vamos mudar para a conta de usuário odoo que criamos lá no inicio:
-
-`sudo su - odoo`
 
 Em seguida, clonar o pacote Odoo, utilizamos a versão 12 neste projeto.
 
 `git clone https://www.github.com/odoo/odoo --depth 1 --branch 12.0 --single-branch /opt/odoo/odoo12`
 
-<!--Com a programa fonte do odoo clonado, criamos um ambiente virtual do Odoo no Python
+Termine as configurações com o Pycharm!
 
-`cd /opt/odoo/odoo12`
-
-`python3 -m venv odoo-venv`
-
-Ativamos o ambiente:
-
-`source odoo-venv/bin/activate`
-
-E instalamos todos os módulos do Python com o pip3:
-
-`pip3 install wheel`
-
-`pip3 install -r requirements.txt`
-
-Desativamos o ambiente virtual com o comando:
-
-`deactivate`
-
-Para criar um novo diretório para os addons personalizados:
-
-`mkdir /opt/odoo/odoo12/odoo-custom-addons`
-
-E, finalmente, voltar para o usuário `sudo`:
-
-`exit`-->
+<br>
