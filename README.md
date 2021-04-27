@@ -8,7 +8,7 @@ Esse é um script de execução bem simples para facilitar a instalação do Odo
 
   - Ubuntu 20.04 | Ubuntu 18.04 Server
   
- <h3>Guia de instalação</h3>
+ <h2>Guia de instalação</h3>
  
  Faça o clone deste projeto utilizando o comando: 
  
@@ -25,7 +25,7 @@ Execute o script de instalação dos pacotes e dependencias
 
 `./run_pack.sh`
 
-<h3>Criação do banco de dados</h3>
+<h2>Criação do banco de dados</h3>
 
 Iniciamos habilitando e iniciando o servidor de banco de dados:
 
@@ -35,11 +35,13 @@ Criamos um banco de dados
 
 `sudo su - postgres -c "createdb odoo"`
 
-<h3>Instalação e configuração do Odoo</h3>
+<h2>Instalação e configuração do Odoo</h3>
 
 Em seguida, clonar o pacote Odoo, utilizamos a versão 12 neste projeto.
 
 `git clone https://www.github.com/odoo/odoo --depth 1 --branch 12.0 --single-branch /opt/odoo/odoo12`
+
+---------
 
 Termine as configurações com o Pycharm!
 
