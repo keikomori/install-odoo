@@ -47,10 +47,9 @@ Termine as configurações com o Pycharm!
 
 <br>
 
-<h3>Estrutura do Diretório/h3>
+<h3>Estrutura do Diretório</h3>
   
  ```
-
 ├── Odoo
 │   └── 12.0
           ├── chillpass
