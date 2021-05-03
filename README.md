@@ -43,8 +43,18 @@ Em seguida, clonar o pacote Odoo, utilizamos a versão 12 neste projeto.
 
 ---------
 
-
-
 Termine as configurações com o Pycharm!
 
 <br>
+
+<h3>Estrutura do Diretório/h3>
+  
+ ```
+
+├── Odoo
+│   └── 12.0
+          ├── chillpass
+          ├── custom-addons
+          └── sipag
+ ```
+
