@@ -43,6 +43,8 @@ Em seguida, clonar o pacote Odoo, utilizamos a versão 12 neste projeto.
 
 ---------
 
+
+
 Termine as configurações com o Pycharm!
 
 <br>
