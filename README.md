@@ -50,10 +50,9 @@ Termine as configurações com o Pycharm!
 <h3>Estrutura do Diretório</h3>
   
  ```
-├── Odoo
+├── projects
 │   └── 12.0
-          ├── chillpass
-          ├── custom-addons
-          └── sipag
+          ├── Odoo
+          └── custom-addons
  ```
 
